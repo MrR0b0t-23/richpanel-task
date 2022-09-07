@@ -56,9 +56,10 @@ function Dashboard() {
       .post("https://richpanel-golang.herokuapp.com/userplan", { token: jwtToken })
       .then((response) => {
         console.log(response);
-        setNewUser(true);
+        if (response.data.message === "No user Found"){
+          setNewUser(true);
+        }
         setloader(true);
-        
         setUserPlan(response.data.data);
       })
       .catch((error) => {

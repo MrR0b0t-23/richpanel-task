@@ -48,7 +48,7 @@ function Login() {
   return (
     <div>
       <ToastContainer />
-      <div className="container">
+      <div className="home-container">
         <div className="container-content">
           <p className="container-title">Login to your account</p>
           <Form onSubmit={handleSubmit}>

@@ -80,7 +80,7 @@ function Dashboard() {
     return <div>Loading</div>;
   }
 
-  if (userPlan !== true || userPlan !== undefined) {
+  if (userPlan === undefined) {
     return (window.location = "/plan");
   }
 

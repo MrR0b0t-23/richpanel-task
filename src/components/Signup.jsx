@@ -11,6 +11,7 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    localStorage.clear();
     const userData = {
       userName: userName,
       emailId: emailId,

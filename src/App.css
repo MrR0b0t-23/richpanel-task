@@ -28,7 +28,7 @@ body {
   font-family: "Inter", sans-serif;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 70vh;
 }
 .home-container{
   display: flex;

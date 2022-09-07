@@ -18,7 +18,7 @@ const Signup = () => {
     };
     console.log(userData);
     axios
-      .post("http://localhost:5000/signup", userData)
+      .post("http://richpanel-golang.herokuapp.com/signup", userData)
       .then((response) => {
         console.log(response);
       })

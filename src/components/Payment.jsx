@@ -20,7 +20,7 @@ function Payment() {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     axios
-      .post("http://richpanel-golang.herokuapp.com/onload", { token: jwtToken })
+      .post("https://richpanel-golang.herokuapp.com/onload", { token: jwtToken })
       .then((response) => {
         console.log(response);
         console.log(response.data.message);
@@ -35,7 +35,7 @@ function Payment() {
       });
     if (logged) {
       axios
-        .post("http://richpanel-golang.herokuapp.com/create-payment-intent/" + metadata.priceId)
+        .post("https://richpanel-golang.herokuapp.com/create-payment-intent/" + metadata.priceId)
         .then((response) => {
           console.log(response);
           setloader(true);

@@ -8,7 +8,7 @@ const Signup = () => {
   const [userName, setUserName] = useState("");
   const [emailId, setEmailId] = useState("");
   const [password, setPassword] = useState("");
-  const [isload, setloader] = userState(false);
+  const [isload, setloader] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.clear();

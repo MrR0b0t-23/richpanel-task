@@ -75,7 +75,7 @@ export default function CheckoutForm({ clientSecret, jwtToken, metadata }) {
       // The payment has been processed!
       if (result.paymentIntent.status === "succeeded") {
         axios
-          .post("http://localhost:5000/activeplan", {
+          .post("https://localhost:5000/activeplan", {
             token: jwtToken,
             planName: metadata.planName,
             videoQuality: metadata.videoQuality,

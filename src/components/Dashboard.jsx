@@ -56,13 +56,14 @@ function Dashboard() {
       .post("https://richpanel-golang.herokuapp.com/userplan", { token: jwtToken })
       .then((response) => {
         console.log(response);
+        setNewUser(true);
         setloader(true);
         
         setUserPlan(response.data.data);
       })
       .catch((error) => {
         setloader(true);
-        setNewUser(true);
+        
         console.log(error);
       });
   }, [jwtToken, logged]);

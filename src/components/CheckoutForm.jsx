@@ -43,15 +43,6 @@ export default function CheckoutForm({ clientSecret, jwtToken, metadata }) {
   }, [jwtToken]);
   console.log(userEmail);
 
-  if (!jwtToken || jwtToken === "undefined") {
-    return (window.location = "/login");
-  }
-
-  // if not valid redirect to login
-  if (logged === false) {
-    return (window.location = "/login");
-  }
-
   if (paymentStatus) {
     setPaymentStatus(false);
     return (window.location = "/");

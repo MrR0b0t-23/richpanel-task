@@ -34,7 +34,6 @@ function Dashboard() {
   const [logged, setLoginStatus] = useState(true);
   const [isload, setloader] = useState(false);
   const [userPlan, setUserPlan] = useState(false);
-  const [newUser, setNewUser] = useState(true);
   const [userEmail, SetUserEmail] = useState("");
   useEffect(() => {
     axios
@@ -59,9 +58,6 @@ function Dashboard() {
       .then((response) => {
         console.log(response);
         setloader(true);
-      if (response.data.data === undefined){
-        setNewUser(true);
-      }
         setUserPlan(response.data.data);
         console.log(response);
       })
@@ -83,7 +79,7 @@ function Dashboard() {
     return <div>Loading</div>;
   }
 
-  if (newUser) {
+  if (userPlan === undefined && isload) {
     return (<Navigate to="/plan" />);
   }
 

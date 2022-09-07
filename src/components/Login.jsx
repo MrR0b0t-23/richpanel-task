@@ -31,7 +31,7 @@ function Login() {
     };
     console.log(userData);
     axios
-      .post(`http://richpanel-golang.herokuapp.com//login/${emailId}/${password}`, userData)
+      .post(`http://richpanel-golang.herokuapp.com/login/${emailId}/${password}`, userData)
       .then((response) => {
         localStorage.setItem("Token", response.data.data.token);
         console.log(response);

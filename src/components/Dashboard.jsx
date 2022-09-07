@@ -80,10 +80,11 @@ function Dashboard() {
   if (!isload) {
     return <div>Loading</div>;
   }
-
-  if (userPlan === undefined && isload) {
+  
+  if (isload){
+  if (userPlan === undefined) {
     return (<Navigate to="/plan" />);
-  }
+  }}
 
   const cancelSubcription = () => {
     axios

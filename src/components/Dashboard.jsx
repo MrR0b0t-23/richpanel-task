@@ -52,8 +52,9 @@ function Dashboard() {
         console.log(error);
         setLoginStatus(false);
       });
-
-    axios
+  }, [jwtToken, logged]);
+  
+   axios
       .post("https://richpanel-golang.herokuapp.com/userplan", { token: jwtToken })
       .then((response) => {
         console.log(response);
@@ -69,8 +70,7 @@ function Dashboard() {
         
         console.log(error);
       });
-  }, [jwtToken, logged]);
-
+  
   if (!jwtToken || jwtToken === "undefined") {
     return (window.location = "/login");
   }

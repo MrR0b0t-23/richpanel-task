@@ -109,7 +109,7 @@ function Dashboard() {
           Log out
         </button>
       </div>
-      <div className="card-container">
+      <div className="container">
         <div className="card-wrapper">
           <div className="card-header">
             <div className="card-title">

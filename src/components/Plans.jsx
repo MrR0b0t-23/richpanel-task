@@ -23,7 +23,7 @@ function Plans() {
 
   useEffect(() => {
     axios
-      .post("http://richpanel-golang.herokuapp.com/onload", { token: jwtToken })
+      .post("https://richpanel-golang.herokuapp.com/onload", { token: jwtToken })
       .then((response) => {
         if (response.message === "failure") {
           localStorage.clear();
@@ -36,7 +36,7 @@ function Plans() {
       });
 
     axios
-      .get("http://richpanel-golang.herokuapp.com/getplans")
+      .get("https://richpanel-golang.herokuapp.com/getplans")
       .then((response) => response)
       .then((responseJson) => {
         setloader(true);

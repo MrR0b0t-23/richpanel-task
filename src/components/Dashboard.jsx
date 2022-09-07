@@ -66,7 +66,7 @@ function Dashboard() {
         
         console.log(error);
       });
-  }, [jwtToken, logged]);
+  }, [jwtToken, logged, newUser]);
 
   if (!jwtToken || jwtToken === "undefined") {
     return (window.location = "/login");

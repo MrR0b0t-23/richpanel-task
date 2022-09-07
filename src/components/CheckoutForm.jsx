@@ -26,7 +26,7 @@ export default function CheckoutForm({ clientSecret, jwtToken, metadata }) {
 
   useEffect(() => {
     axios
-      .post("https://localhost:5000/onload", { token: jwtToken })
+      .post("https://richpanel-golang.herokuapp.com/onload", { token: jwtToken })
       .then((response) => {
         console.log(response);
         console.log(response.data.message);

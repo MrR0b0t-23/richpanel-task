@@ -8,7 +8,7 @@ const Signup = () => {
   const [userName, setUserName] = useState("");
   const [emailId, setEmailId] = useState("");
   const [password, setPassword] = useState("");
-
+  const [isload, setloader] = userState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.clear();
@@ -22,13 +22,15 @@ const Signup = () => {
       .post("https://richpanel-golang.herokuapp.com/signup", userData)
       .then((response) => {
         console.log(response);
+        setloader(true)
       })
       .catch((error) => {
         console.log(error);
       });
-    window.location = "/login";
   };
-
+  if (isload){
+    return (window.location = "/login");
+  }
   return (
     <div className="home-container">
       <div className="container-content">

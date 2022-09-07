@@ -26,7 +26,7 @@ export default function CheckoutForm({ clientSecret, jwtToken, metadata }) {
 
   useEffect(() => {
     axios
-      .post("http://localhost:5000/onload", { token: jwtToken })
+      .post("https://localhost:5000/onload", { token: jwtToken })
       .then((response) => {
         console.log(response);
         console.log(response.data.message);

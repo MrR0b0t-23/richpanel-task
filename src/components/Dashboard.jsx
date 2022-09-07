@@ -81,8 +81,8 @@ function Dashboard() {
     return <div>Loading</div>;
   }
 
-  if (newUser) {
-    return (window.location = "/plan");
+  if (newUser === true) {
+    //return (window.location = "/plan");
   }
 
   const cancelSubcription = () => {

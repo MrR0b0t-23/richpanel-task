@@ -1,0 +1,100 @@
+.card-wrapper {
+  width: 600px;
+  height: auto;
+  background: white;
+  border-radius: 15px;
+  padding: 20px 30px 20px 30px;
+  align-content: center;
+  justify-content: center;
+}
+.card-header {
+  display: flex;
+}
+.card-title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.badge-cancel {
+  color: #e46e6a;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #fcf0f0;
+  border-radius: 4px;
+  padding: 2px 5px 2px 5px;
+}
+.badge-active {
+  color: #1f4d91;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #c2dcfc;
+  border-radius: 4px;
+  padding: 2px 5px 2px 5px;
+}
+.card-header .btn {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1f4d91;
+  margin-right: 0;
+  border: transparent;
+  margin-left: auto;
+}
+.card-header .btn:hover {
+  border: transparent;
+  color: white;
+  background-color: #1f4d91;
+}
+
+.card-plan-wrapper {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.card-plan {
+  font-size: 18px;
+  color: #585857;
+}
+
+.card-body {
+  position: relative;
+  display: grid;
+}
+.card-device {
+  font-size: 15px;
+  color: #8d8d8f;
+}
+
+.card-price {
+  font-size: 35px;
+  margin-top: 5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.changePlanButton {
+  text-align: center;
+  width: 130px;
+  padding: 10px 15px 10px 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: 300;
+  align-content: center;
+  color: #1f4d91;
+  border: 2px solid #1f4d91;
+  border-radius: 5px;
+}
+
+.changePlanButton:hover {
+  color: white;
+  background: #1f4d91;
+}
+
+.card-footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  background: #585857;
+  padding: 10px;
+  border-radius: 5px;
+}

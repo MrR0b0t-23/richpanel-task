@@ -1,0 +1,131 @@
+.plan-content {
+  width: 70%;
+  height: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.planBox-container {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.planBox-wrapper {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.planBox {
+  position: relative;
+  margin-left: 24px;
+  margin-right: 24px;
+  display: flex;
+  height: 100px;
+  color: white;
+  width: calc(100% / 4);
+  background: #1f4d91;
+  cursor: default;
+  align-items: center;
+  border-radius: 3px;
+  font-weight: 600;
+  justify-content: center;
+  opacity: 50%;
+}
+
+.planBox-selected {
+  position: relative;
+  margin-left: 24px;
+  margin-right: 24px;
+  display: flex;
+  height: 100px;
+  color: white;
+  width: calc(100% / 4);
+  background: #1f4d91;
+  cursor: default;
+  align-items: center;
+  border-radius: 3px;
+  font-weight: 600;
+  justify-content: center;
+  opacity: 100%;
+}
+
+.planBox-selected::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--primary);
+  clear: both;
+}
+
+.tableRow {
+  display: flex;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tableDataTitle {
+  width: 40%;
+  text-align: start;
+  padding-left: 20px;
+}
+
+.tableDataFeature-selected {
+  font-weight: 500;
+  width: calc(60% / 4);
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  justify-content: center;
+  color: var(--primary);
+}
+.tableDataFeature {
+  font-weight: 500;
+  width: calc(60% / 4);
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  opacity: 70%;
+}
+.deviceTableRow {
+  font-size: 12px;
+  text-align: center;
+}
+.deviceTable-value {
+  padding: 0 0 12px 0;
+}
+.deviceTable-container {
+  justify-content: center;
+  text-align: center;
+  margin-left: 40px;
+}
+
+.deviceTable-wrapper {
+  align-items: center;
+  text-align: center;
+}
+
+.next-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nextButton {
+  text-align: center;
+  width: 40%;
+  background-color: #1f4d91;
+  color: white;
+  font-size: 18px;
+  padding: 5px 0 5px 0;
+  border-radius: 3px;
+}

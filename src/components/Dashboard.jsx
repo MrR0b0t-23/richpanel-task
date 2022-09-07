@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "./Dashboard.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {Navigate} from "react-router-dom";
 
 const welcome = (userEmail) =>
   toast.success(`Welcome ${userEmail.data} !`, {
@@ -57,7 +58,9 @@ function Dashboard() {
       .then((response) => {
         console.log(response);
         setloader(true);
+      if (response.data.data === undefined){
         setNewUser(true);
+      }
         setUserPlan(response.data.data);
         console.log(response);
       })
@@ -66,7 +69,7 @@ function Dashboard() {
         
         console.log(error);
       });
-  }, [jwtToken, logged, newUser]);
+  }, [jwtToken, logged]);
 
   if (!jwtToken || jwtToken === "undefined") {
     return (window.location = "/login");
@@ -80,8 +83,8 @@ function Dashboard() {
     return <div>Loading</div>;
   }
 
-  if (userPlan === undefined) {
-    return (window.location = "/plan");
+  if (newUser) {
+    return (<Navigate to="/plan" />);
   }
 
   const cancelSubcription = () => {

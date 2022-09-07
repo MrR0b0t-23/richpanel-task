@@ -28,7 +28,7 @@ body {
   font-family: "Inter", sans-serif;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
 }
 
 .logout-btn {

@@ -57,11 +57,12 @@ function Dashboard() {
       .then((response) => {
         console.log(response);
         setloader(true);
-        setNewUser(true);
+        
         setUserPlan(response.data.data);
       })
       .catch((error) => {
         setloader(true);
+        setNewUser(true);
         console.log(error);
       });
   }, [jwtToken, logged]);

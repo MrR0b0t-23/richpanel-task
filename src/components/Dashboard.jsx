@@ -98,7 +98,7 @@ function Dashboard() {
     cancelled();
   };
 
-  welcome(userEmail);
+  //welcome(userEmail);
 
   const handleLogout = () => {
     localStorage.clear();

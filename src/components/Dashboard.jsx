@@ -65,7 +65,7 @@ function Dashboard() {
         console.log(error);
       });
     
-  }, [jwtToken, logged]);
+  }, [jwtToken,userPlan, logged]);
   
    
   
@@ -80,11 +80,10 @@ function Dashboard() {
   if (!isload) {
     return <div>Loading</div>;
   }
-  
-  if (isload){
-  if (userPlan === undefined) {
+ 
+  if (userPlan.device === undefined) {
     return (<Navigate to="/plan" />);
-  }}
+  }
 
   const cancelSubcription = () => {
     axios

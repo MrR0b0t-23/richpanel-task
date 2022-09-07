@@ -81,7 +81,7 @@ function Dashboard() {
   }
 
   if (newUser === true) {
-    //return (window.location = "/plan");
+    return (window.location = "/plan");
   }
 
   const cancelSubcription = () => {

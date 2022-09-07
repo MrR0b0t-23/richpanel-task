@@ -65,7 +65,7 @@ function Dashboard() {
         console.log(error);
       });
     
-  }, [jwtToken,userPlan, logged]);
+  }, []);
   
    
   

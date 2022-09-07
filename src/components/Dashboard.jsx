@@ -61,7 +61,7 @@ function Dashboard() {
       })
       .catch((error) => {
         setloader(true);
-        
+      setUserPlan("None");
         console.log(error);
       });
     
@@ -81,10 +81,9 @@ function Dashboard() {
     return <div>Loading</div>;
   }
  
-  if (userPlan.device === undefined) {
+  if (userPlan === "None"){
     return (<Navigate to="/plan" />);
   }
-
   const cancelSubcription = () => {
     axios
       .post("https://richpanel-golang.herokuapp.com/cancelplan", { token: jwtToken })

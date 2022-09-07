@@ -56,11 +56,10 @@ function Dashboard() {
       .post("https://richpanel-golang.herokuapp.com/userplan", { token: jwtToken })
       .then((response) => {
         console.log(response);
-        if (response.message === "No user Found"){
-          setNewUser(true);
-        }
         setloader(true);
+        setNewUser(true);
         setUserPlan(response.data.data);
+        console.log(response);
       })
       .catch((error) => {
         setloader(true);
@@ -82,7 +81,7 @@ function Dashboard() {
   }
 
   if (newUser === true) {
-    return (window.location = "/plan");
+    //return (window.location = "/plan");
   }
 
   const cancelSubcription = () => {

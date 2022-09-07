@@ -37,7 +37,7 @@ function Dashboard() {
   const [userEmail, SetUserEmail] = useState("");
   useEffect(() => {
     axios
-      .post("http://richpanel-golang.herokuapp.com/onload", { token: jwtToken })
+      .post("https://richpanel-golang.herokuapp.com/onload", { token: jwtToken })
       .then((response) => {
         console.log(response);
         console.log(response.data.message);
@@ -53,7 +53,7 @@ function Dashboard() {
       });
 
     axios
-      .post("http://richpanel-golang.herokuapp.com/userplan", { token: jwtToken })
+      .post("https://richpanel-golang.herokuapp.com/userplan", { token: jwtToken })
       .then((response) => {
         console.log(response);
         setloader(true);
@@ -84,7 +84,7 @@ function Dashboard() {
 
   const cancelSubcription = () => {
     axios
-      .post("http://richpanel-golang.herokuapp.com/cancelplan", { token: jwtToken })
+      .post("https://richpanel-golang.herokuapp.com/cancelplan", { token: jwtToken })
       .then((response) => {
         console.log(response);
       })

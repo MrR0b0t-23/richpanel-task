@@ -81,7 +81,7 @@ function Dashboard() {
     return <div>Loading</div>;
   }
  
-  if (userPlan === "None"){
+  if (userPlan === "None" && logged == true){
     return (<Navigate to="/plan" />);
   }
   const cancelSubcription = () => {
